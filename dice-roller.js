@@ -6,19 +6,35 @@
 
 //element is rolled element[i] number of times
 
-function rollingDice(number) {
-  let newString = "";
-  let numberOfNumbers = number *
-  for (let i = 0; i < number.length; i++) {
+// using command line input 
 
-  }
-  array.forEach(number => {
-    let randomNumber = (Math.random * number);
-    newString += "number";
-  }); console.log(newString);
 
+//console.log(process.argv);
+const input = process.argv.slice(2);
+console.log(typeof input);
+
+let numberRolled = getRandomIntInclusive(1, 6);
+
+
+function getRandomIntInclusive(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min + 1) + min); //The maximum is 
+  //inclusive and the minimum is inclusive
+  rollingDice(input);
 }
 
+function rollingDice() {
+  numberArray = [];
+  //numberArray.length = input;
+  for (let i = 0; i < input; i++) {
+
+    let numberOfNumbers = numberRolled * input);
+    console.log(numberOfNumbers);
+    numberArray += numberOfNumbers;
+  } console.log(numberArray);
+}
+/*
 function joinList(array) {
   let sentence = "";
   {
@@ -33,4 +49,4 @@ function joinList(array) {
   } return sentence;
 }
 
-rollingDice(3);
+*/
