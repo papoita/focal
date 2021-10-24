@@ -13,27 +13,32 @@
 const input = process.argv.slice(2);
 console.log(typeof input);
 
-let numberRolled = getRandomIntInclusive(1, 6);
 
 
+
+/*
 function getRandomIntInclusive(min, max) {
   min = Math.ceil(min);
   max = Math.floor(max);
-  return Math.floor(Math.random() * (max - min + 1) + min); //The maximum is 
+  let numberRolled = Math.floor(Math.random() * (max - min + 1) + min); //The maximum is
   //inclusive and the minimum is inclusive
-  rollingDice(input);
+  console.log(numberRolled);
+  return numberRolled;
 }
+getRandomIntInclusive(1, 6);
 
+*/
 function rollingDice() {
   numberArray = [];
   //numberArray.length = input;
   for (let i = 0; i < input; i++) {
-
-    let numberOfNumbers = numberRolled * input);
-    console.log(numberOfNumbers);
-    numberArray += numberOfNumbers;
+    let numberRolled = Math.floor((Math.random() * 6) + 1);
+    console.log(numberRolled);
+    numberArray += numberRolled;
+    numberArray += ", ";
   } console.log(numberArray);
 }
+rollingDice(input);
 /*
 function joinList(array) {
   let sentence = "";
