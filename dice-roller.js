@@ -30,20 +30,23 @@ getRandomIntInclusive(1, 6);
 */
 
 function rollingDice() {
-  numberArray = [];
+  let numberArray = [];
   //numberArray.length = input;
   for (let i = 0; i < input; i++) {
     let numberRolled = Math.floor((Math.random() * 6) + 1);
     console.log(numberRolled);
-    numberArray += numberRolled;
-    numberArray += ", ";
-  } console.log(numberArray);
+    numberArray.push(numberRolled);
+    //  numberArray += numberRolled;
+    //numberArray += ", ";
+  }
+  console.log(numberArray);
+  return numberArray;
 }
-rollingDice(input);
-/*
+
+
 function joinList(array) {
   let sentence = "";
-  {
+  for (let i = 0; i < array.length; i++) {
     if (i < array.length - 1) {
       sentence += array[i];
       sentence += ", ";
@@ -52,7 +55,22 @@ function joinList(array) {
     } else if (array.length === 1) {
       sentence += array[0];
     }
-  } return sentence;
+  }
+
+  return sentence;
 }
 
+/*
+const diceOutput = rollingDice(input);
+console.log({ diceOutput }); // to have  anice labelled output
+
+const joinDiceOutput = joinList(diceOutput);
+console.log({ joinDiceOutput });
+
+//solve by funciton composition
 */
+
+const diceRoller = joinList(rollingDice(input));
+console.log(`its printing the result ${diceRoller}`);
+
+
