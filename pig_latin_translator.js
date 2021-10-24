@@ -1,12 +1,21 @@
 var originalWords = process.argv.slice(2);
 var pigLatinWords = [];
 
-for (var i = 1; i < originalWords.length; i++) {
+for (var i = 0; i < originalWords.length; i++) {
   pigLatinWords.push(translateToPigLatin(originalWords[i]));
 }
 
 console.log(pigLatinWords.join(' '));
 
 function translateToPigLatin(word) {
-  return word.slice(2, word.length) + word[0] + "ay";
+  console.log("Word", word);
+  console.log("First letter", word[0]);
+  console.log("resr of word", word.slice(1, word.length));
+  return word.slice(1, word.length) + word[0] + "ay";
 }
+
+//instruction
+//input are words
+//translate one by one
+//joins translated words
+//console.log union
