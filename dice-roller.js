@@ -28,6 +28,7 @@ function getRandomIntInclusive(min, max) {
 getRandomIntInclusive(1, 6);
 
 */
+
 function rollingDice() {
   numberArray = [];
   //numberArray.length = input;
