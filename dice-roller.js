@@ -71,6 +71,6 @@ console.log({ joinDiceOutput });
 */
 
 const diceRoller = joinList(rollingDice(input));
-console.log(`its printing the result ${diceRoller}`);
+console.log(`Rolled ${input} dice: ${diceRoller}`);
 
 
